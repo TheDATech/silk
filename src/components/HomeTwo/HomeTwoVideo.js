@@ -1,11 +1,12 @@
 import React from 'react'
 import VideoPopUp from '../Plugins/VideoPopup'
 import { useState } from 'react'
+import axios from 'axios';
 
 export default function HomeTwoVideo() {
     const [isPopUp, setPopUp] = useState(false)
     const [userdata,setUserdata]=useState({
-        full_name:"",
+        name:"",
         email:"",
         phone:"",
         service:"",
@@ -20,10 +21,15 @@ export default function HomeTwoVideo() {
         });
       };
     
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission, e.g., send data to an API
-        console.log(userdata);
+
+      const handleSubmit = async(e) => {
+        try{
+            e.preventDefault();
+            const res=await axios.post('https://silk.thedatech.com/api',{userdata})
+            console.log('res',res);
+        }catch(err){
+            console.log('error message',err)
+        }
       };
 
     return (
@@ -62,7 +68,7 @@ export default function HomeTwoVideo() {
                                 <div className="quote-form">
                                     <form onSubmit={handleSubmit} className="mt-none-15">
                                         <div className="form-group mt-15">
-                                            <input type="text" name="full_name" id="name" placeholder="Your Name" value={userdata.full_name}
+                                            <input type="text" name="name" id="name" placeholder="Your Name" value={userdata.name}
           onChange={handleChange}/>
                                         </div>
                                         <div className="form-group mt-15">

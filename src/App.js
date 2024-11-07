@@ -27,6 +27,7 @@ import Home2 from './pages/index-02';
 import RefundPolicy from './pages/Refund_policy';
 import CustomePatches from './pages/CustomePatches';
 import NewsDetails from './pages/news-details';
+import Patches from './pages/patches';
 
 function App() {
   const [activePreLoader, setActivePreLoader] = useState(true);
@@ -46,6 +47,7 @@ function App() {
           <Route path='/' element={<Home2/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/services' element={<Service/>}/>
+          <Route path='/patches' element={<Patches/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='portfolio' element={<Project/>}/>
           <Route path='/blogs' element={<News/>}/>

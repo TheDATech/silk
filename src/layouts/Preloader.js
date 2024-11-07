@@ -21,6 +21,7 @@ export default function Preloader() {
                             <span data-text-preloader="K" className="letters-loading">
                                 K
                             </span>
+                            &nbsp;
                             <span data-text-preloader="D" className="letters-loading">
                                 D
                             </span>

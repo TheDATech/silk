@@ -31,6 +31,7 @@ export default function MobileMenu() {
                             <li><NavLink to="/services/embroidery-digitizing/chenille-embroidery-digitizing">Chenille Embroidery Digitizing</NavLink></li>
                             <li><NavLink to="/services/embroidery-digitizing/sequin-embroidery-digitizing">Sequin Embroidery Digitizing</NavLink></li>
                         </ul>)}</li>
+                    <li><NavLink to="https://silkpatches.netlify.app/custom-patches">Patches</NavLink></li>
                     <li><NavLink to="/portfolio">Portfolio</NavLink></li>
                     <li><NavLink to="/pricing">Pricing</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>

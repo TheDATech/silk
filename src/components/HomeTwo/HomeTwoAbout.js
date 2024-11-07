@@ -27,7 +27,10 @@ export default function HomeTwoAbout() {
                                 <h4 className="sub-heading sub-heading__2 mb-10">About Us <span><img
                                     src="/images/shape/heading-shape-4.png" className="ml-10" alt="" /></span></h4>
                                 <h2 className="section-title section-title__2 mb-30">FROM CONCEPT TO CREATION</h2>
-                                <p>Welcome to Silk Digitizing, your premier destination for embroidery digitizing and vector conversion.. We specialize in transforming designs into stunning embroidered masterpieces and scalable vectors.</p>
+                                <p>Welcome to Silk Digitizing, your premier destination for
+embroidery digitizing and vector conversion.. We specialize
+in transforming designs into stunning embroidered
+masterpieces and scalable vectors.</p>
                             </div>
                             <div className="row mt-none-40">
                                 <div className="col-xl-6 mt-40">

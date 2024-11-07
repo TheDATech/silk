@@ -1,13 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import serviceDetailData from './serviceDetailData';
 import { Helmet } from 'react-helmet';
 import ServiceRecPortfolio from './ServiceRecPortfolio';
+import axios from 'axios';
 
 export default function ServiceDetailsContent() {
+    const [userdata,setUserdata]=useState({
+    name:"",
+    email:"",
+    phone:"",
+    service:"",
+    message:""
+});
+
+const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserdata({
+      ...userdata,
+      [name]: value
+    });
+  };
+
+
+  const handleSubmit = async(e) => {
+    try{
+        e.preventDefault();
+        const res=await axios.post('https://silk.thedatech.com/api',{userdata})
+        console.log('res',res);
+    }catch(err){
+        console.log('error message',err)
+    }
+  };
+
     const {name,subcat}=useParams();
     console.log('name',name);
     const FilterData = serviceDetailData && serviceDetailData.filter((item) => item.slug === name);
+
     return (
         <>
         <Helmet>
@@ -89,17 +118,23 @@ export default function ServiceDetailsContent() {
                                 <div className="contact-form contact-form__3">
                                     <form action="index">
                                         <div className="form-group mt-20">
-                                            <input type="text" name="name" id="name" placeholder="Your Name"/>
+                                            <input type="text" name="name" id="name" placeholder="Your Name" value={userdata.name}
+          onChange={handleChange}/>
                                         </div>
                                         <div className="form-group mt-20">
-                                            <input type="email" name="email" id="email" placeholder="Email Address"/>
+                                            <input type="email" name="email" id="email" placeholder="Email Address" value={userdata.email}
+          onChange={handleChange}/>
                                         </div>
                                         <div className="form-group mt-20">
-                                            <input type="tel" name="phone" id="tel" placeholder="Your phone number"/>
+                                            <input type="tel" name="phone" id="tel" placeholder="Your phone number" value={userdata.phone}
+          onChange={handleChange}/>
                                         </div>
                                         <div className="form-group mt-20">
                                         <select
           name="service"
+          id="service"
+          value={userdata.service}
+          onChange={handleChange}
           style={{ width: '100%',background:"#fff",borderRadius:"0",border:"none" }}
         >
           <option value="" disabled>Choose Service</option>
@@ -108,7 +143,8 @@ export default function ServiceDetailsContent() {
         </select>
                                         </div>
                                         <div className="form-group mt-20">
-                                            <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                                            <textarea name="message" id="message" placeholder="Your Message" value={userdata.message}
+          onChange={handleChange}></textarea>
                                         </div>
                                         <button type="submit" className="site-btn site-btn__2 mt-10"><span
                                             className="icon icon__black"><i className="far fa-arrow-right"></i></span> SEnd

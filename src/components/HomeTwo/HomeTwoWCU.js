@@ -13,8 +13,12 @@ export default function HomeTwoWCU() {
                                     why choose us
                                     <span><img src="/images/shape/heading-shape-4.png" className="ml-5" alt=""/></span>
                                 </h4>
-                                <h2 className="section-title section-title__2 section-title__white mb-30">CUSTOM EMBROIDERY DIGITIZING</h2>
-                                <p>We offer custom embroidery digitizing services, transforming your artwork into precise digital files for flawless stitching. Enhance your products with unique, high-quality embroidery, perfect for branding and personalization needs.</p>
+                                <h2 className="section-title section-title__2 section-title__white mb-30"> CUSTOM EMBROIDERY DIGITIZING</h2>
+                                <p>We offer custom embroidery digitizing services,
+transforming your artwork into precise digital files for
+flawless stitching. Enhance your products with unique,
+high-quality embroidery, perfect for branding and
+personalization needs.</p>
                             </div>
                             <div className="wcu-box__wrapper">
                                 <div className="wcu-box">

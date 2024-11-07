@@ -63,7 +63,20 @@ export default function PatchesDetailsContent() {
                                             <input type="text" name="name" id="name" placeholder="Your Name"/>
                                         </div>
                                         <div className="form-group mt-20">
-                                            <input type="email" name="email" id="mail" placeholder="Email Address"/>
+                                            <input type="email" name="email" id="email" placeholder="Email Address"/>
+                                        </div>
+                                        <div className="form-group mt-20">
+                                            <input type="tel" name="phone" id="tel" placeholder="Your phone number"/>
+                                        </div>
+                                        <div className="form-group mt-20">
+                                        <select
+          name="service"
+          style={{ width: '100%',background:"#fff",borderRadius:"0",border:"none" }}
+        >
+          <option value="" disabled>Choose Service</option>
+          <option value="Embroidery Digitizing">Embroidery Digitizing</option>
+          <option value="Vector Conversion">Vector Conversion</option>
+        </select>
                                         </div>
                                         <div className="form-group mt-20">
                                             <textarea name="message" id="message" placeholder="Your Message"></textarea>
@@ -74,41 +87,6 @@ export default function PatchesDetailsContent() {
                                     </form>
                                 </div>
                             </div>
-                            <div className="sidebar blue-bg mt-30">
-                                <h4 className="sidebar__title sidebar__title--white">
-                                    <span><img src="/images/shape/heading-shape-6.png" className="mr-5" alt=""/></span>
-                                    Design Guideline
-                                </h4>
-                                <div className="design mt-none-20">
-                                    <div className="design-item mt-20">
-                                        <div className="design-item--icon">
-                                            <img className="default" src="/images/icons/design-1.png" alt=""/>
-                                            <img class ="hover" src="/images/icons/design-1-h.png" alt=""/>
-                                            </div>
-                                            <div class ="design-item--content">
-                                            <h4>Photoshop File</h4>
-                                            </div>
-                                        </div>
-                                        <div className="design-item mt-20">
-                                            <div className="design-item--icon">
-                                                <img className="default" src="/images/icons/design-2.png" alt=""/>
-                                                <img class ="hover" src="/images/icons/design-2-h.png" alt=""/>
-                                                </div>
-                                                <div class ="design-item--content">
-                                                <h4>Illustrator File</h4>
-                                                </div>
-                                            </div>
-                                            <div className="design-item mt-20">
-                                                <div className="design-item--icon">
-                                                    <img className="default" src="/images/icons/design-3.png" alt=""/>
-                                                    <img class ="hover" src="/images/icons/design-3-h.png" alt=""/>
-                                                    </div>
-                                                    <div class ="design-item--content">
-                                                    <h4>Jpg file</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div className="col-xl-8">
                                         <div className="details-content">
@@ -173,86 +151,8 @@ export default function PatchesDetailsContent() {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="row mt-40 mb-35">
-                                                <div className="col-xl-6">
-                                                    <div className="details-content__thumb">
-                                                        <img src="/images/bg/design-guideline.jpeg" alt=""/>
-                                                    </div>
-                                                </div>
-                                                <div className="col-xl-6">
-                                                    <div className="design-guideline">
-                                                        <h2 className="details-content__title mb-20">Design Guideline</h2>
-                                                        <ul>
-                                                            <li>Standard Postcard<span>4" x 7"</span></li>
-                                                            <li>Small Postcards<span>4.13" x 5.83"</span></li>
-                                                            <li>New Standard Postcards<span>4" x 6"</span></li>
-                                                            <li>New Square Postcards<span>4.7" x 4.7"</span></li>
-                                                            <li>Rounded Postcards<span>4" x 8"</span></li>
-                                                            <li>Half Page Postcards<span>5.5" x 8.5"</span></li>
-                                                            <li>New Large Postcards<span>5.5" x 8.5"</span></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row mt-none-30">
-                                                <div className="col-xl-3 col-lg-6 mt-30">
-                                                    <div className="postcard-item">
-                                                        <h2 className="postcard-item__price">$2.30</h2>
-                                                        <p>50 Postcard <br/>
-                                                            Price</p>
-                                                    </div>
-                                                </div>
-                                                <div className="col-xl-3 col-lg-6 mt-30">
-                                                    <div className="postcard-item">
-                                                        <h2 className="postcard-item__price">$5.30</h2>
-                                                        <p>250 Postcard <br/>
-                                                            Price</p>
-                                                    </div>
-                                                </div>
-                                                <div className="col-xl-3 col-lg-6 mt-30">
-                                                    <div className="postcard-item">
-                                                        <h2 className="postcard-item__price">$7.30</h2>
-                                                        <p>500 Postcard <br/>
-                                                            Price</p>
-                                                    </div>
-                                                </div>
-                                                <div className="col-xl-3 col-lg-6 mt-30">
-                                                    <div className="postcard-item">
-                                                        <h2 className="postcard-item__price">$9.30</h2>
-                                                        <p>1k Postcard <br/>
-                                                            Price</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row mt-35">
-                                                <div className="col-xl-12">
-                                                    <h2 className="details-content__title mb-20">Printing Made Easier</h2>
-                                                    <p>Quam parturient mi amet curae augue varius laoreet vehicula non sem aliquet lectus
-                                                        justo litora fames estab phasellus
-                                                        risus ad sollicitudin magna Viverra diam pretium cursus curabitur parturient
-                                                        convallis hymenaeos suspendisse nibh
-                                                        facilisi purus penatibus habitasse mus orcine muscle adipiscing sapien aliquam
-                                                        nulla. Erat parturient auctor facilisis.
-                                                        Nisi cum fringilla hymenaeos ridiculus habitasses augue nullam fringilla. Taciti
-                                                        convallis. Vitae sapien nisi enim vis
-                                                        metus cras fusce lectus sed luctus quis Clas nisl blandit parturient molestie
-                                                        praesent nec</p>
-                                                    <div className="details-content__thumb mt-35 mb-35">
-                                                        <img src="/images/bg/custom-patches-bg-2.jpeg" alt=""/>
-                                                    </div>
-                                                    <p>Phasellus hac phasellus consequat malesuada veler aliquam dictumst amet a phasellus
-                                                        lacinia integer curabitur duis. Urna
-                                                        taciti nisl torquent varius libero dui. Tempus magnis libero pulvinar purus pharetra
-                                                        justo sem curae duis eget tempus
-                                                        erat ornare. Consequat litora a blandit fermentum. Quam taciti site nascetur nunc
-                                                        litora quis tempor metus adipiscing ac
-                                                        quis sodales ultrices cubilia. Arcu in penatibus vestibulum diam. Curabitur platea
-                                                        quam fusce molestie venenatis platea
-                                                        ligula in aenean gravida dolor aptent nostra luctus rutrum morbi porttitor cursus
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            </div>                                      
+                                    
                                         </div>
                                     </div>
                                 </div>

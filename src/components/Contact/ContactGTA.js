@@ -1,8 +1,9 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 
 export default function ContactGTA() {
     const [userdata,setUserdata]=useState({
-        full_name:"",
+        name:"",
         email:"",
         phone:"",
         service:"",
@@ -17,10 +18,14 @@ export default function ContactGTA() {
         });
       };
     
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission, e.g., send data to an API
-        console.log(userdata);
+      const handleSubmit = async(e) => {
+        try{
+            e.preventDefault();
+            const res=await axios.post('https://silk.thedatech.com/api',{userdata})
+            console.log('res',res);
+        }catch(err){
+            console.log('error message',err)
+        }
       };
     return (
         <>
@@ -43,25 +48,25 @@ export default function ContactGTA() {
                             <div className="contact-form">
                                 <form onSubmit={handleSubmit} id="contact-form">
                                     <div className="form-group mt-25">
-                                        <input type="text" name="full_name" id="name" placeholder="Your Name" value={userdata.full_name}
+                                        <input type="text" name="name" id="name" placeholder="Your Name" value={userdata?.name}
           onChange={handleChange}/>
                                     </div>
                                     <div className="form-group mt-25">
-                                        <input type="email" name="email" id="email" placeholder="Email Address" value={userdata.email}
+                                        <input type="email" name="email" id="email" placeholder="Email Address" value={userdata?.email}
           onChange={handleChange}/>
                                     </div>
                                     <div className="form-group mt-25">
                                         <input type="tel" name="phone"
           id="tel"
           placeholder="Phone Number"
-          value={userdata.phone}
+          value={userdata?.phone}
           onChange={handleChange}/>
                                     </div>
                                     <div className="form-group mt-25">
                                     <select
           name="service"
           id="service"
-          value={userdata.service}
+          value={userdata?.service}
           onChange={handleChange}
           style={{ width: '100%' }}
         >
@@ -71,7 +76,7 @@ export default function ContactGTA() {
         </select>
                                     </div>
                                     <div className="form-group mt-25">
-                                        <textarea name="message" id="message" placeholder="Your Message" value={userdata.message}
+                                        <textarea name="message" id="message" placeholder="Your Message" value={userdata?.message}
           onChange={handleChange}></textarea>
                                     </div>
                                     <button type="submit" className="site-btn site-btn__2 mt-15"><span className="icon icon__black"><i

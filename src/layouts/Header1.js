@@ -61,13 +61,7 @@ export default function Header1() {
                                                 </li>
                                                 <li className="menu_has_children"><NavLink to="/services">Services</NavLink>
                                                 <ul className="sub-menu">
-                                                       <li><NavLink to="/services/line-art">Line Art</NavLink></li>
-                                                        <li className='second-parent'><NavLink to="/services/graphic-designing">Graphic Designing</NavLink>
-                                                           <ul className="sub-menu1"><li><NavLink to="/services/graphic-designing/logo-designing">Logo Designing</NavLink></li>
-                                                           <li><NavLink to="/services/graphic-designing/photo-editing">Photo Editing</NavLink></li></ul>
-                                                        </li>
-                                                        <li><NavLink to="/services/vector-conversion">Vector Conversion</NavLink></li>
-                                                        <li className='second-parent'><NavLink to="/services/embroidery-digitizing" className='a'>Embroidery Digitizing</NavLink>
+                                                <li className='second-parent'><NavLink to="/services/embroidery-digitizing" className='a'>Embroidery Digitizing</NavLink>
                                                         <ul className="sub-menu1"><li><NavLink to="/services/embroidery-digitizing/flat-embroidery-digitizing">Flat Embroidery Digitizing</NavLink></li>
                                                            <li><NavLink to="/services/embroidery-digitizing/applique-embroidery-digitizing">Applique Embroidery Digitizing</NavLink></li>
                                                            <li><NavLink to="/services/embroidery-digitizing/3D-puff-embroidery-digitizing">3D Puff Embroidery Digitizing</NavLink></li>
@@ -75,6 +69,13 @@ export default function Header1() {
                                                            <li><NavLink to="/services/embroidery-digitizing/sequin-embroidery-digitizing">Sequin Embroidery Digitizing</NavLink></li>
                                                            </ul>
                                                         </li>
+                                                        <li><NavLink to="/services/vector-conversion">Vector Conversion</NavLink></li>
+                                                        <li className='second-parent'><NavLink to="/services/graphic-designing">Graphic Designing</NavLink>
+                                                           <ul className="sub-menu1"><li><NavLink to="/services/graphic-designing/logo-designing">Logo Designing</NavLink></li>
+                                                           <li><NavLink to="/services/graphic-designing/photo-editing">Photo Editing</NavLink></li></ul>
+                                                        </li>
+                                                       <li><NavLink to="/services/line-art">Line Art</NavLink></li>
+                                                       
                                                     </ul></li>
                                                    {/*  <li className="menu_has_children">
                                                     <NavLink to="/custom-patches">Custom Patches</NavLink>
@@ -87,6 +88,7 @@ export default function Header1() {
                                                         <li><NavLink to="/custom-patches/leather-patches">Leather Patches</NavLink></li>
                                                     </ul>
                                                 </li> */}
+                                                 <li><NavLink to="https://silkpatches.netlify.app/custom-patches" target='_blank'>Patches</NavLink></li>
                                                 <li><NavLink to="/portfolio">Portfolio</NavLink></li>
                                                 <li><NavLink to="/pricing">Pricing</NavLink></li>
                                                 <li><NavLink to="/contact">Contact</NavLink></li>

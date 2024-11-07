@@ -20,6 +20,7 @@ export default function Footer() {
                                 <ul>
                                     <li><Link to="/services/embroidery-digitizing"><i className="fa fa-angle-right"></i>Embroidery Digitizing</Link></li>
                                     <li><Link to="/services/vector-conversion"><i className="fa fa-angle-right"></i>Vector Conversion</Link></li>
+                                    <li><Link to="https://silkpatches.netlify.app/custom-patches"><i className="fa fa-angle-right"></i>Custom Patches</Link></li>
                                     {/*<li><Link to="/service/custom-patches"><i className="fa fa-angle-right"></i>Custom Patches</Link>
                                     </li> */}
                                 </ul>
